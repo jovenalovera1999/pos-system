@@ -49,9 +49,59 @@
         </div>
 
         <div class="row">
-            <canvas id="chartjs-pie" width="592" height="600" style="display: block; height: 300px; width: 296px;" class="chartjs-render-monitor"></canvas>
+            <div class="col-md-4">
+                <canvas class="h-100" id="pieChart"></canvas>
+            </div>
+            <div class="col-md-8">
+                <canvas class="h-100" id="lineChart"></canvas>
+            </div>
         </div>
     </div>
 </main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+
+<script>
+  const pieChart = document.getElementById('pieChart');
+  const lineChart = document.getElementById('lineChart');
+
+  new Chart(pieChart, {
+    type: 'pie',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+  new Chart(lineChart, {
+    type: 'line',
+    data: {
+      labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+      datasets: [{
+        label: '# of Votes',
+        data: [12, 19, 3, 5, 2, 3],
+        borderWidth: 1
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+</script>
 
 @endsection
