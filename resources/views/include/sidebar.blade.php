@@ -7,7 +7,6 @@
         <div class="profile">
             <h1 class="text-light mt-3">Demo App</h1>
             {{-- <img src="{{ asset('img/user/my_profile.png') }}" alt="" class="img-fluid rounded-circle bg-light"> --}}
-            <h1 class="text-light fs-6">-- Name of User --</h1>
         </div>
         <!-- .nav-menu -->
         <nav id="navbar" class="nav-menu navbar">
@@ -21,4 +20,4 @@
         </nav>
     </div>
 </header>
-<!-- End Header -->
+<!-- ======= End Header ======= -->
